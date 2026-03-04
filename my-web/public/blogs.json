@@ -51,5 +51,21 @@
       "development",
       "resources"
     ]
+  },
+
+   {
+    "id": 5,
+    "cover": "https://i.ibb.co/vvTfkcv/4.jpg",
+    "title": "Free images and resources collection for website",
+    "author_img": "https://i.ibb.co/Sn7zB4q/girl2.jpg",
+    "author": "Anmol Baloch",
+    "posted_date": "June 5, 2023",
+    "reading_time": 9,
+    "hashtags": [
+      "development",
+      "resources"
+    ]
   }
+
+
 ]
