@@ -3,4 +3,6 @@ const diff = (a, b) => a-b;
 
 const multiplyTwoNumbers = (a, b) => (a*b);
 
-export {add, diff, multiplyTwoNumbers as mul};
+const divide = (a, b) => (a/b);
+
+export {add, diff, divide, multiplyTwoNumbers as mul};

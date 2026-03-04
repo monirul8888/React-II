@@ -1,6 +1,6 @@
 
 import './App.css'
-import { add, diff, mul } from './utils/calculation/math'
+import { add, diff, mul, divide as div } from './utils/calculation/math'
 
 function App() {
  
@@ -12,6 +12,9 @@ function App() {
 
   const mult = mul(4,5);
   console.log(mult);
+
+  const divv = div(10, 2);
+  console.log(divv);
 
   return (
     <>
