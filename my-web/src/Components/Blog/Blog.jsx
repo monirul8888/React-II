@@ -1,19 +1,19 @@
 import React from "react";
 
 const Blog = ({ blog }) => {
-  const { id, title, cover } = blog;
+  const { id, title, cover, author_img, author, hashtags } = blog;
   console.log(blog);
   return (
-    <div>
-     
+    <div className="m-1">
       <div className="card bg-base-100 w-96 shadow-sm">
         <figure>
-          <img
-            src={cover}
-            alt="Shoes"
-          />
+          <img src={cover} alt="Shoes" />
         </figure>
         <div className="card-body">
+          <div className="author flex justify-around items-center">
+            <h3>{author}</h3>
+            <img className="w-16" src={author_img} alt="" />
+          </div>
           <h2 className="card-title">
             {title}
             <div className="badge badge-secondary">NEW</div>
@@ -21,6 +21,11 @@ const Blog = ({ blog }) => {
           <p>
             A card component has a figure, a body part, and inside body there
             are title and actions parts
+            <div className="flex border-1">
+              {hashtags.map((has) => (
+                <p>{has}</p>
+              ))}
+            </div>
           </p>
           <div className="card-actions justify-end">
             <button className="btn badge badge-outline">Mark As Read</button>
@@ -33,12 +38,6 @@ const Blog = ({ blog }) => {
 };
 
 export default Blog;
-
-
-
-
-
-
 
 // {
 //     "id": 2,
