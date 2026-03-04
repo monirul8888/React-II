@@ -1,25 +1,25 @@
 
+import { Suspense } from 'react';
 import './App.css'
-import { add, diff, mul, divide as div } from './utils/calculation/math'
+import Bottles from './components/bottles/bottles';
 
 function App() {
  
-  const exportSum = add(2,5);
-  console.log(exportSum);
-
-  const exportDiff = diff(10,5);
-  console.log(exportDiff);
-
-  const mult = mul(4,5);
-  console.log(mult);
-
-  const divv = div(10, 2);
-  console.log(divv);
-
+  const bottlePromise = fetch("https://raw.githubusercontent.com/ProgrammingHero1/awesome-water-bottles/refs/heads/main/public/bottles.json").then(res => res.json());
+  
   return (
     <>
      
-      <h1>Vite + React</h1>
+      <h1>Buy Awesome Water Bottle</h1>
+
+      <Suspense fallback = {<h3>Bottles are Loading</h3>
+      }>
+
+        <Bottles bottlePromise = {bottlePromise}>
+
+        </Bottles>
+
+      </Suspense>
     
      
     </>

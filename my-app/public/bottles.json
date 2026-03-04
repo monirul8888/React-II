@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "AquaPure Stainless Steel Bottle",
+    "brand": "AquaPure",
+    "capacity_ml": 750,
+    "price": 450,
+    "color": "Silver",
+    "material": "Stainless Steel",
+    "insulated": true,
+    "in_stock": true,
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8"
+  },
+  {
+    "id": 2,
+    "name": "HydroMax Plastic Bottle",
+    "brand": "HydroMax",
+    "capacity_ml": 1000,
+    "price": 250,
+    "color": "Blue",
+    "material": "BPA-Free Plastic",
+    "insulated": false,
+    "in_stock": true,
+    "image": "https://images.unsplash.com/photo-1589363460779-3f88f8c0f4e1"
+  },
+  {
+    "id": 3,
+    "name": "CoolSip Thermo Bottle",
+    "brand": "CoolSip",
+    "capacity_ml": 500,
+    "price": 600,
+    "color": "Black",
+    "material": "Stainless Steel",
+    "insulated": true,
+    "in_stock": false,
+    "image": "https://images.unsplash.com/photo-1616628182504-7b0a2e7b6c5b"
+  },
+  {
+    "id": 4,
+    "name": "EcoLife Glass Bottle",
+    "brand": "EcoLife",
+    "capacity_ml": 650,
+    "price": 550,
+    "color": "Transparent",
+    "material": "Glass",
+    "insulated": false,
+    "in_stock": true,
+    "image": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3"
+  },
+  {
+    "id": 5,
+    "name": "SportyFit Squeeze Bottle",
+    "brand": "SportyFit",
+    "capacity_ml": 800,
+    "price": 300,
+    "color": "Red",
+    "material": "Plastic",
+    "insulated": false,
+    "in_stock": true,
+    "image": "https://images.unsplash.com/photo-1590080876228-32a1d1d9c4b7"
+  }
+]
