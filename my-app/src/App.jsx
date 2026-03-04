@@ -1,8 +1,17 @@
 
 import './App.css'
+import { add, diff, mul } from './utils/calculation/math'
 
 function App() {
  
+  const exportSum = add(2,5);
+  console.log(exportSum);
+
+  const exportDiff = diff(10,5);
+  console.log(exportDiff);
+
+  const mult = mul(4,5);
+  console.log(mult);
 
   return (
     <>
