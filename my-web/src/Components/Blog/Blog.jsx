@@ -1,4 +1,5 @@
 import React from "react";
+import { FaBookmark } from "react-icons/fa";
 
 const Blog = ({ blog }) => {
   const { id, title, cover, author_img, author, hashtags } = blog;
@@ -13,6 +14,8 @@ const Blog = ({ blog }) => {
           <div className="author flex justify-around items-center">
             <h3>{author}</h3>
             <img className="w-16" src={author_img} alt="" />
+            <FaBookmark size={25} />
+            
           </div>
           <h2 className="card-title">
             {title}
