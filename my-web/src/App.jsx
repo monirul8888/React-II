@@ -10,7 +10,9 @@ function App() {
     setBookMarked([...bookMarked, blog]);
   };
 
-  console.log(bookMarked);
+  const handleMarkAsRead = (time) =>{
+    console.log("Mark As Read", time);
+  }
 
   return (
     <>
@@ -18,11 +20,11 @@ function App() {
 
       <div className="main-container flex text-center ">
         <div className="left-container w-[70%]">
-          <Blogs handleBookMark={handleBookMark}></Blogs>
+          <Blogs handleBookMark={handleBookMark} handleMarkAsRead = {handleMarkAsRead}></Blogs>
         </div>
         <div className="right-container w-[30%]">
           <h1>Reading Time : </h1>
-          <h1>Bookmark Count: </h1>
+          <h1>Bookmark Count: {bookMarked.length} </h1>
           {bookMarked.map((marked) => (
             <div key={marked.id} className="border p-2 my-2 rounded">
               <h4>{marked.title}</h4>
