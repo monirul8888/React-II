@@ -2,7 +2,7 @@ import React from "react";
 import { FaBookmark } from "react-icons/fa";
 
 const Blog = ({ blog, handleBookMark, handleMarkAsRead }) => {
-  const { id, title, cover, author_img, author, hashtags, reading_time } = blog;
+  const {  title, cover, author_img, author, hashtags, reading_time } = blog;
 
   return (
     <div className="m-1">
@@ -27,7 +27,7 @@ const Blog = ({ blog, handleBookMark, handleMarkAsRead }) => {
             A card component has a figure, a body part, and inside body there
             are title and actions parts{" "}
           </p>
-          <div className="flex border-1">
+          <div className="flex ">
             {hashtags.map((has, index) => (
               <p key={index}>#{has}</p>
             ))}
