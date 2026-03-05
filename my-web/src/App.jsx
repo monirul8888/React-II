@@ -6,12 +6,15 @@ import Navbar from "./Components/Navbar/Navbar";
 function App() {
   const [bookMarked, setBookMarked] = useState([]);
 
+  const [countReadingTime, setCountReadingTime] = useState(0);
+
   const handleBookMark = (blog) => {
     setBookMarked([...bookMarked, blog]);
   };
 
   const handleMarkAsRead = (time) =>{
-    console.log("Mark As Read", time);
+    const newTime = countReadingTime + time;
+    setCountReadingTime(newTime);
   }
 
   return (
@@ -23,7 +26,7 @@ function App() {
           <Blogs handleBookMark={handleBookMark} handleMarkAsRead = {handleMarkAsRead}></Blogs>
         </div>
         <div className="right-container w-[30%]">
-          <h1>Reading Time : </h1>
+          <h1>Reading Time : {countReadingTime} </h1>
           <h1>Bookmark Count: {bookMarked.length} </h1>
           {bookMarked.map((marked) => (
             <div key={marked.id} className="border p-2 my-2 rounded">
