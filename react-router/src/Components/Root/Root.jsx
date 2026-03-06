@@ -1,12 +1,20 @@
 import React from 'react';
 import Header from '../Header/Header';
 import { Outlet } from 'react-router';
+import Navbar from '../Header/Navbar';
+import Footer from '../Footer/Footer';
+import Sidebar from '../Sidebar/Sidebar';
 
 const Root = () => {
     return (
         <div>
+            <Navbar></Navbar>
             <Header></Header>
-            <Outlet></Outlet>
+            <div>
+                <Sidebar></Sidebar>
+                <Outlet></Outlet>
+            </div>
+            <Footer></Footer>
         </div>
     );
 };
