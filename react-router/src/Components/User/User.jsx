@@ -1,7 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 const User = ({ user }) => {
-  const { name, email, website, phone, company, address } = user;
+  const { id,name, email, website, phone, company, address } = user;
 
   return (
     <div className="card w-75 bg-base-100 shadow-xl mx-auto">
@@ -25,6 +26,7 @@ const User = ({ user }) => {
 
         <div className="card-actions">
           <button className="btn btn-primary btn-sm">Follow</button>
+          <NavLink  to = {`/users/${id}`}>Show Details</NavLink>
         </div>
       </div>
     </div>
