@@ -4,7 +4,7 @@ import { useState } from 'react';
 const ControlField = () => {
     const handleSubmit = (e) =>{
         e.preventDefault();
-        console.log(email)
+        console.log(email, name)
     }
     const [password, setPassword] = useState("")
     const [error, setError] =useState("");
@@ -36,7 +36,7 @@ const ControlField = () => {
             <form onSubmit={handleSubmit} >
                
                 <input type="email" name="email" id="" required placeholder='Email'
-                onChange={handleOnChangeEmail}/>
+                onChange={handleOnChangeEmail} defaultValue={email}/>
                 <br />
                 <input type="password" name="password" id="" placeholder='Password' defaultValue={password} onChange={handlePasswordOnChange} />
                 
