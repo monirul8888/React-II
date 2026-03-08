@@ -2,6 +2,7 @@
 import './App.css'
 import ControlField from './Components/ControlField/ControlField'
 import FormAction from './Components/FormAction/FormAction'
+import Navbar from './Components/Navbar/Navbar'
 import SimpleForm from './Components/SimpleForm/SimpleForm'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <>
       
       <h1>Explore React Form</h1>
+      
       {/* <SimpleForm></SimpleForm> */}
       {/* <FormAction></FormAction> */}
       <ControlField></ControlField>

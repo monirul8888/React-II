@@ -8,6 +8,11 @@ const ControlField = () => {
     }
     const [password, setPassword] = useState("")
     const [error, setError] =useState("");
+    const [name, setName] = useState("");
+
+    const handleNameOnChange = (e) => {
+        console.log(e.target.value);
+    }
 
     const handlePasswordOnChange = (e) =>{
         console.log(e.target.value);
@@ -19,8 +24,9 @@ const ControlField = () => {
         else{
             setError("")
         }
-
     }
+
+
     return (
         <div>
             <form onSubmit={handleSubmit} >
@@ -28,7 +34,12 @@ const ControlField = () => {
                 <input type="email" name="email" id="" required placeholder='Email'/>
                 <br />
                 <input type="password" name="password" id="" placeholder='Password' defaultValue={password} onChange={handlePasswordOnChange} />
+                
+                <br />
+                <input type="text" name="" id="" placeholder='Name'  defaultValue={name} onChange={handleNameOnChange}/>
+                <br />
                 <input type="submit" name="" id="" />
+
             </form>
             <p style={{color: "red"}}>{error}</p>
         </div>
