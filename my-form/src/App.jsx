@@ -5,6 +5,7 @@ import ControlField2 from './Components/ControlField/ControlField2'
 import FormAction from './Components/FormAction/FormAction'
 import HookForm from './Components/HookForm/HookForm'
 import Navbar from './Components/Navbar/Navbar'
+import ProductManagement from './Components/Product/ProductManagement'
 import SimpleForm from './Components/SimpleForm/SimpleForm'
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
       {/* <FormAction></FormAction> */}
       {/* <ControlField></ControlField> */}
       {/* <ControlField2></ControlField2> */}
-      <HookForm></HookForm>
+      {/* <HookForm></HookForm> */}
+      <ProductManagement></ProductManagement>
     
     </>
   )
