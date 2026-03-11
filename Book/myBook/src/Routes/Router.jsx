@@ -10,12 +10,13 @@ export const router = createBrowserRouter([
     path: "/",
     element: <Root></Root>,
     errorElement: <ErrorPage></ErrorPage>,
-    children:[
-        {
-            path: "/",
-            Component: Home
-        }
-    ]
-    
+    children: [
+      {
+        index: true,
+        path: "/",
+        loader: ()=>fetch("data/booksData.json"),
+        Component: Home,
+      },
+    ],
   },
 ]);
