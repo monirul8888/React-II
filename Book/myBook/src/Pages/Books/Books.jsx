@@ -19,11 +19,10 @@ const Books = ({ data }) => {
     <div>
       <h1 className="text-3xl text-center py-6 "> Books</h1>
       <Suspense fallback={<span>Loading.....</span>}>
-       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-         {data.map((book, index) => (
-          <Book key={index} book={book}></Book>
-        ))}
-       </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {Array.isArray(data) &&
+            data.map((book, index) => <Book key={index} book={book} />)}
+        </div>
       </Suspense>
     </div>
   );
