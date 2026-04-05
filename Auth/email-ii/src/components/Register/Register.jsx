@@ -1,31 +1,23 @@
-import React, { useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import React from "react";
+import {  createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase/firebase.init";
 
 const Register = () => {
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState(false);
-  const handleRegister = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Register");
     const email = e.target.email.value;
     const password = e.target.password.value;
-
-
-    setError("")
-    setSuccess(false)
+    console.log(email, password);
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        console.log("After Creation NEw USer : ", result.user);
-        setSuccess(true)
-        e.target.reset();
+        console.log("After Created : ", result.user);
       })
       .catch((error) => {
         console.log(error);
-        setError(error.message);
       });
   };
+
   return (
     <div>
       <div className="hero bg-base-200 min-h-screen">
@@ -40,7 +32,7 @@ const Register = () => {
           </div>
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <div className="card-body">
-              <form onSubmit={handleRegister}>
+              <form onSubmit={handleSubmit}>
                 <fieldset className="fieldset">
                   <label className="label">Email</label>
                   <input
@@ -59,10 +51,8 @@ const Register = () => {
                   <div>
                     <a className="link link-hover">Forgot password?</a>
                   </div>
-                  <button className="btn btn-neutral mt-4">Register</button>
+                  <button className="btn btn-neutral mt-4">Sign UP</button>
                 </fieldset>
-                {error && <p className="text-red-500">{error}</p>}
-                {success && <p className="text-green-500">Account Created Successfully</p>}
               </form>
             </div>
           </div>
